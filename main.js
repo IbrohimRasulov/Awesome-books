@@ -1,16 +1,28 @@
-const bookList = [];
+//! Add books to list
+const list = document.querySelector('#list');
+const addBook = document.querySelector('#add-book');
 
-const title = document.querySelector('#bookTitle');
-const author = document.querySelector('#bookAuthor');
-const btn = document.querySelector('#addBtn');
-const booklist = document.querySelector('ul');
+addBook.addEventListener('click', function(){
+  const title = document.querySelector('#book-title').value;
+  const author = document.querySelector('#book-author').value;
 
-btn.addEventListener('click', function(){
-  const newBook = document.createElement('li');
+  const li = document.createElement('li');
   const bookTitle = document.createElement('span');
   const bookAuthor = document.createElement('span');
   const deleteBtn = document.createElement('button');
-  
-  bookTitle.innerText = title;
-  console.log(bookTitle);
+
+  deleteBtn.textContent = 'Remove';
+  bookTitle.textContent = title;
+  bookAuthor.textContent = author;
+
+  li.appendChild(bookTitle);
+  li.appendChild(bookAuthor);
+  li.appendChild(deleteBtn);
+  list.appendChild(li);
+
+  title.value = '';
+  author.value = '';
 })
+
+
+console.log(addForm);
