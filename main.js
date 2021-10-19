@@ -18,7 +18,13 @@ addBook.addEventListener('click', function(){
   deleteBtn.textContent = 'Remove';
   bookTitle.textContent = title.value;
   bookAuthor.textContent = author.value;
+
   li.style.listStyleType = 'none';
+  li.style.borderBottom = '1px solid gray';
+  li.style.paddingBottom = '5px';
+  bookTitle.style.display = 'block';
+  bookAuthor.style.display = 'block';
+
 
   li.appendChild(bookTitle);
   li.appendChild(bookAuthor);
