@@ -3,10 +3,12 @@ const list = document.querySelector('#list');
 const addBook = document.querySelector('#add-book');
 
 addBook.addEventListener('click', function(){
-  const title = document.querySelector('#book-title').value;
-  const author = document.querySelector('#book-author').value;
+  const title = document.querySelector('#book-title');
+  const author = document.querySelector('#book-author');
 
-  localStorage.setItem(title, author);
+  if(title !== undefined && author !== undefined){
+    localStorage.setItem(title.value, author.value);
+  }
 
   const li = document.createElement('li');
   const bookTitle = document.createElement('span');
@@ -14,8 +16,8 @@ addBook.addEventListener('click', function(){
   const deleteBtn = document.createElement('button');
 
   deleteBtn.textContent = 'Remove';
-  bookTitle.textContent = title;
-  bookAuthor.textContent = author;
+  bookTitle.textContent = title.value;
+  bookAuthor.textContent = author.value;
   li.style.listStyleType = 'none';
 
   li.appendChild(bookTitle);
