@@ -2,7 +2,9 @@
 const list = document.querySelector('#list');
 const addBook = document.querySelector('#add-book');
 
-addBook.addEventListener('click', function(){
+addBook.addEventListener('click', function(e){
+  e.preventDefault();
+  
   const title = document.querySelector('#book-title');
   const author = document.querySelector('#book-author');
 
@@ -34,3 +36,10 @@ addBook.addEventListener('click', function(){
 
   console.log(li);
 });
+
+//! Delete books from list
+document.body.addEventListener('click', function(e){
+  if(e.target.textContent == 'Remove'){
+    e.target.parentElement.remove();
+  }
+})
