@@ -1,0 +1,7 @@
+.new-book {
+ list-style-type: none;
+ border-bottom: 1px solid #ccc;
+ padding-bottom: 5px;
+ margin-left: -39px;
+ max-width: 300px; 
+}

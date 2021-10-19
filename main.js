@@ -19,9 +19,7 @@ addBook.addEventListener('click', function(){
   bookTitle.textContent = title.value;
   bookAuthor.textContent = author.value;
 
-  li.style.listStyleType = 'none';
-  li.style.borderBottom = '1px solid gray';
-  li.style.paddingBottom = '5px';
+  li.classList.add('new-book');
   bookTitle.style.display = 'block';
   bookAuthor.style.display = 'block';
 
