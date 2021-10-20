@@ -10,16 +10,33 @@ class Book {
     this.title = title;
     this.author = author;
   }
+
+  removeBook() {
+    let key = this.title;
+    localStorage.removeItem(key);
+  }
 }
+
+class Books {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(title, author) {
+    let book = new Book(title, author);
+    this.books.push(book);
+  }
+}
+
+const newBooks = new Books();
 
 function addToLocalStorage() {
   const key = title.value;
-  localStorage.setItem(key, JSON.stringify(bookArray));
+  localStorage.setItem(key, JSON.stringify(newBooks));
 }
 
 function addNewBook() {
-  const newBook = new Book(title.value, author.value);
-  bookArray.push(newBook);
+  newBooks.addBook(title.value, author.value);
   addToLocalStorage();
 }
 
@@ -30,7 +47,7 @@ function showBook() {
     const dataFromLocalStorage = JSON.parse(localStorage.getItem(key));
 
     if (localStorage) {
-      dataFromLocalStorage.forEach((book) => {
+      dataFromLocalStorage.books.forEach((book) => {
         const li = document.createElement('li');
         const bookTitle = document.createElement('span');
         const bookAuthor = document.createElement('span');
@@ -42,10 +59,11 @@ function showBook() {
         bookAuthor.textContent = book.author;
 
         deleteBtn.addEventListener('click', (e) => {
-          const key = book.title;
-          localStorage.removeItem(key);
-
+          // const key = book.title;
+          // localStorage.removeItem(key);
+          const bookToDelete = new Book(book.title, book.author);
           e.target.parentNode.remove();
+          bookToDelete.removeBook();
         });
 
         li.classList.add('new-book');
