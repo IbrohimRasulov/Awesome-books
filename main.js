@@ -27,7 +27,7 @@ function showBook() {
   Object.keys(localStorage).forEach((key) => {
     const dataFromLocalStorage = JSON.parse(localStorage.getItem(key));
 
-    if(localStorage) {
+    if (localStorage) {
       dataFromLocalStorage.forEach((book) => {
         const li = document.createElement('li');
         const bookTitle = document.createElement('span');
