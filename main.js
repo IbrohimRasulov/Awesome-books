@@ -33,7 +33,7 @@ function showBook(){
         const bookTitle = document.createElement('span');
         const bookAuthor = document.createElement('span');
         const deleteBtn = document.createElement('button');
-        
+
         deleteBtn.textContent = 'Remove';
         deleteBtn.classList.add('remove');
         bookTitle.textContent = book.title;
@@ -49,12 +49,12 @@ function showBook(){
         li.classList.add('new-book');
         bookTitle.style.display = 'block';
         bookAuthor.style.display = 'block';
-        
+
         li.appendChild(bookTitle);
         li.appendChild(bookAuthor);
         li.appendChild(deleteBtn);
         list.appendChild(li);
-      })
+      });
     }
   });
 }

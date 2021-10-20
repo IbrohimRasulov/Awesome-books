@@ -11,8 +11,8 @@ Javascript practice to store, display and remove objects from localStorage and U
 * [JS](https://www.javascript.com/)
 
 ### Live Demo Link
- 
- Check <a href="https://aduda-boaz.github.io/awesomebooks/" target="_blank">this</a> live demo link
+
+ Check [this](https://aduda-boaz.github.io/awesomebooks/){:target="_blank"} live demo link
 
 ## Authors
 
@@ -22,11 +22,10 @@ Javascript practice to store, display and remove objects from localStorage and U
 - Twitter: [@IbrohimRasu1ov](https://twitter.com/IbrohimRasu1ov)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
 
-👤 **Luis Octavio Ramirez Cruz**
+👤 **Boaz Aduda**
 
-- GitHub: [LOctavio](https://github.com/LOctavio)
-- Twitter: [@Octavio_ram431](https://twitter.com/Octavio_ram431)
-- LinkedIn: [Luis Octavio Ramirez Cruz](https://www.linkedin.com/in/luis-octavio-ramirez-cruz/);
+- GitHub: [@Aduda-Boaz](https://github.com/Aduda-Boaz)
+- Twitter: [Twitter](https://twitter.com/BoazAduda)
 
 ## Getting Started
 
