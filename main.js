@@ -3,8 +3,6 @@ const form = document.querySelector('form');
 const title = document.querySelector('#book-title');
 const author = document.querySelector('#book-author');
 
-const bookArray = [];
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -12,10 +10,12 @@ class Book {
   }
 
   removeBook() {
-    let key = this.title;
+    const key = this.title;
     localStorage.removeItem(key);
   }
 }
+
+/* eslint max-classes-per-file: ["error", 2] */
 
 class Books {
   constructor() {
@@ -23,7 +23,7 @@ class Books {
   }
 
   addBook(title, author) {
-    let book = new Book(title, author);
+    const book = new Book(title, author);
     this.books.push(book);
   }
 }
