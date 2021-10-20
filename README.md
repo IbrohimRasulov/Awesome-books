@@ -12,7 +12,7 @@ Javascript practice to store, display and remove objects from localStorage and U
 
 ### Live Demo Link
  
-Check [this](https://aduda-boaz.github.io/awesomebooks/) live demo link
+ Check <a href="https://aduda-boaz.github.io/awesomebooks/" target="_blank">this</a> live demo link
 
 ## Authors
 
