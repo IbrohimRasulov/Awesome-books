@@ -1,4 +1,3 @@
-//! Add books to list
 const list = document.querySelector('#list');
 const addBook = document.querySelector('#add-book');
 const form = document.querySelector('form');
@@ -55,9 +54,6 @@ function showBook(){
         li.appendChild(bookAuthor);
         li.appendChild(deleteBtn);
         list.appendChild(li);
-
-      
-
       })
     }
   });
