@@ -9,6 +9,6 @@ form {
   margin-right: auto;
 }
 
-.odd:nth-child(odd) {
+.oddBook:nth-child(odd) {
   background-color: #ddd;
 }

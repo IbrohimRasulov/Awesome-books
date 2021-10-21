@@ -57,7 +57,7 @@ function showBook() {
 
         deleteBtn.classList = 'remove btn btn-danger btn-sm float-end';
         list.classList = 'list-group';
-        li.classList = 'list-group-item list-group-item-light odd';
+        li.classList = 'list-group-item list-group-item-light oddBook';
 
         deleteBtn.addEventListener('click', (e) => {
           const bookToDelete = new Book(book.title, book.author);
