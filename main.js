@@ -48,6 +48,17 @@ function showBook() {
 
     if (localStorage) {
       dataFromLocalStorage.books.forEach((book) => {
+        
+        /*
+        const li = document.createElement('li');
+        const bookTitle = document.createElement('span');
+        const deleteBtn = document.createElement('button');
+
+        deleteBtn.textContent = 'Remove';
+        deleteBtn.classList = 'remove, btn btn-danger btn-sm float-end';
+        bookTitle.textContent = `"${book.title}" by ${book.author}`;
+        */
+
         const li = document.createElement('li');
         const bookTitle = document.createElement('span');
         const bookAuthor = document.createElement('span');
@@ -59,12 +70,15 @@ function showBook() {
         bookAuthor.textContent = book.author;
 
         deleteBtn.addEventListener('click', (e) => {
-          // const key = book.title;
-          // localStorage.removeItem(key);
           const bookToDelete = new Book(book.title, book.author);
           e.target.parentNode.remove();
           bookToDelete.removeBook();
         });
+
+        /*
+        list.classList = 'list-group';
+        li.classList = 'list-group-item list-group-item-dark';
+        */
 
         li.classList.add('new-book');
         bookTitle.style.display = 'block';
@@ -80,3 +94,13 @@ function showBook() {
 }
 
 showBook();
+
+
+// .new-book {
+//   list-style-type: none;
+//   border-bottom: 1px solid #ccc;
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   margin-left: -39px;
+//   max-width: 300px;
+// }
