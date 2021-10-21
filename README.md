@@ -4,6 +4,8 @@
 
 Javascript practice to store, display and remove objects from localStorage and UI.
 
+![screenshot](Screenshot.png)
+
 ### Built With
 
 * [HTML](https://www.w3schools.com/html/)
