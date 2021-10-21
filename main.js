@@ -48,26 +48,16 @@ function showBook() {
 
     if (localStorage) {
       dataFromLocalStorage.books.forEach((book) => {
-        
-        /*
         const li = document.createElement('li');
         const bookTitle = document.createElement('span');
         const deleteBtn = document.createElement('button');
 
         deleteBtn.textContent = 'Remove';
-        deleteBtn.classList = 'remove, btn btn-danger btn-sm float-end';
         bookTitle.textContent = `"${book.title}" by ${book.author}`;
-        */
 
-        const li = document.createElement('li');
-        const bookTitle = document.createElement('span');
-        const bookAuthor = document.createElement('span');
-        const deleteBtn = document.createElement('button');
-
-        deleteBtn.textContent = 'Remove';
-        deleteBtn.classList.add('remove');
-        bookTitle.textContent = book.title;
-        bookAuthor.textContent = book.author;
+        deleteBtn.classList = 'remove btn btn-danger btn-sm float-end';
+        list.classList = 'list-group';
+        li.classList = 'list-group-item list-group-item-light';
 
         deleteBtn.addEventListener('click', (e) => {
           const bookToDelete = new Book(book.title, book.author);
@@ -75,17 +65,7 @@ function showBook() {
           bookToDelete.removeBook();
         });
 
-        /*
-        list.classList = 'list-group';
-        li.classList = 'list-group-item list-group-item-dark';
-        */
-
-        li.classList.add('new-book');
-        bookTitle.style.display = 'block';
-        bookAuthor.style.display = 'block';
-
         li.appendChild(bookTitle);
-        li.appendChild(bookAuthor);
         li.appendChild(deleteBtn);
         list.appendChild(li);
       });
@@ -94,13 +74,3 @@ function showBook() {
 }
 
 showBook();
-
-
-// .new-book {
-//   list-style-type: none;
-//   border-bottom: 1px solid #ccc;
-//   padding-top: 5px;
-//   padding-bottom: 5px;
-//   margin-left: -39px;
-//   max-width: 300px;
-// }
