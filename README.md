@@ -24,11 +24,6 @@ Check [this](https://aduda-boaz.github.io/awesomebooks/) live demo link
 - Twitter: [@IbrohimRasu1ov](https://twitter.com/IbrohimRasu1ov)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
 
-👤 **Boaz Aduda**
-
-- GitHub: [@Aduda-Boaz](https://github.com/Aduda-Boaz)
-- Twitter: [Twitter](https://twitter.com/BoazAduda)
-
 ## Getting Started
 
 * You will not need additional instructions on installing Prerequisites.
