@@ -74,7 +74,6 @@ function addNewBook() {
   newBooks.addBook(title.value, author.value);
   addToLocalStorage();
   showBook();
-  alert('New book added');
 }
 
 form.addEventListener('submit', addNewBook);
@@ -84,8 +83,7 @@ showBook();
 const tabs = document.querySelector('.tabs');
 const listBtn = document.querySelector('.section-1');
 const addBtn = document.querySelector('.section-2');
-const contactBtn = document.querySelector('.section-3');
-// const active = document.querySelectorAll('.nav-link');
+const contactBtn = document.querySelector('.section-3');;
 
 tabs.addEventListener('click', (e) => {
   if (e.target.textContent === 'List') {
