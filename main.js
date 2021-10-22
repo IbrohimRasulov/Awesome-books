@@ -28,21 +28,17 @@ class Books {
   }
 }
 
-const newBooks = new Books();
+let newBooks = new Books();
 
 function addToLocalStorage() {
   const key = title.value;
   localStorage.setItem(key, JSON.stringify(newBooks));
+  title.value = '';
+  author.value = '';
 }
-
-function addNewBook() {
-  newBooks.addBook(title.value, author.value);
-  addToLocalStorage();
-}
-
-form.addEventListener('submit', addNewBook);
 
 function showBook() {
+  list.innerHTML = '';
   Object.keys(localStorage).forEach((key) => {
     const dataFromLocalStorage = JSON.parse(localStorage.getItem(key));
 
@@ -73,4 +69,42 @@ function showBook() {
   });
 }
 
+function addNewBook() {
+  newBooks = new Books();
+  newBooks.addBook(title.value, author.value);
+  addToLocalStorage();
+  showBook();
+}
+
+form.addEventListener('submit', addNewBook);
+
 showBook();
+
+const tabs = document.querySelector('.tabs');
+const listBtn = document.querySelector('.section-1');
+const addBtn = document.querySelector('.section-2');
+const contactBtn = document.querySelector('.section-3');
+
+tabs.addEventListener('click', (e) => {
+  if (e.target.textContent === 'List') {
+    listBtn.classList.remove('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.add('hide');
+  } else if (e.target.textContent === 'Add new') {
+    listBtn.classList.add('hide');
+    addBtn.classList.remove('hide');
+    contactBtn.classList.add('hide');
+  } else {
+    listBtn.classList.add('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.remove('hide');
+  }
+});
+
+function printTime() {
+  const currentDate = document.querySelector('#currentDate');
+  // eslint-disable-next-line no-undef
+  currentDate.innerHTML = `<div>${luxon.DateTime.now().toFormat('MMMM dd yyyy, hh:mm:ss')}</div>`;
+}
+
+setInterval(printTime, 1000);

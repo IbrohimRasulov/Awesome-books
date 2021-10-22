@@ -2,6 +2,7 @@
   width: 500px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 100px;
 }
 
 form {
@@ -11,4 +12,29 @@ form {
 
 .oddBook:nth-child(odd) {
   background-color: #ddd;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  margin-top: 50px;
+}
+
+.active-tab {
+  background-color: #0d6efd;
+  border-radius: 8px;
+  color: white;
+}
+
+#currentDate {
+  float: right;
+  font-size: 20px;
+  font-family: monospace;
+  margin: -10px 15px;
 }
