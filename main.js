@@ -81,32 +81,32 @@ function showBook() {
 
 showBook();
 
-const tabs = document.querySelector('.tabs')
+const tabs = document.querySelector('.tabs');
 const listBtn = document.querySelector('.section-1');
 const addBtn = document.querySelector('.section-2');
 const contactBtn = document.querySelector('.section-3');
 // const active = document.querySelectorAll('.nav-link');
 
-tabs.addEventListener('click', function(e){
-    if (e.target.textContent == 'List') {
-      listBtn.classList.remove('hide');
-      addBtn.classList.add('hide');
-      contactBtn.classList.add('hide');
-    } else if (e.target.textContent == 'Add new') {
-      listBtn.classList.add('hide');
-      addBtn.classList.remove('hide');
-      contactBtn.classList.add('hide');
-    } else {
-      listBtn.classList.add('hide');
-      addBtn.classList.add('hide');
-      contactBtn.classList.remove('hide');
-    }
-    console.log(e.target)
-  });
-
-  function printTime() {
-    const currentDate = document.querySelector('#currentDate');
-    // eslint-disable-next-line no-undef
-    currentDate.innerHTML = `<div>${luxon.DateTime.now().toFormat('MMMM dd yyyy, hh:mm:ss')}</div>`;
+tabs.addEventListener('click', function (e) {
+  if (e.target.textContent === 'List') {
+    listBtn.classList.remove('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.add('hide');
+  } else if (e.target.textContent == 'Add new') {
+    listBtn.classList.add('hide');
+    addBtn.classList.remove('hide');
+    contactBtn.classList.add('hide');
+  } else {
+    listBtn.classList.add('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.remove('hide');
   }
-  setInterval(printTime, 1000);
+});
+
+function printTime() {
+  const currentDate = document.querySelector('#currentDate');
+  // eslint-disable-next-line no-undef
+  currentDate.innerHTML = `<div>${luxon.DateTime.now().toFormat('MMMM dd yyyy, hh:mm:ss')}</div>`;
+}
+
+setInterval(printTime, 1000);
