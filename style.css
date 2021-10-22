@@ -13,9 +13,24 @@ form {
   background-color: #ddd;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
 footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  margin-top: 100px;
+  background-color: white;
+}
+
+.hide {
+  display: none;
+}
+
+#list:last-child {
+  margin-bottom: 400px;
 }

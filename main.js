@@ -74,3 +74,28 @@ function showBook() {
 }
 
 showBook();
+
+const tabs = document.querySelector('.nav-pills')
+const listBtn = document.querySelector('.section-1');
+const addBtn = document.querySelector('.section-2');
+const contactBtn = document.querySelector('.section-3');
+
+tabs.addEventListener('click', function(e){
+  if (e.target.textContent == 'List') {
+    listBtn.classList.remove('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.add('hide');
+  } else if (e.target.textContent == 'Add new') {
+    listBtn.classList.add('hide');
+    addBtn.classList.remove('hide');
+    contactBtn.classList.add('hide');
+  } else {
+    listBtn.classList.add('hide');
+    addBtn.classList.add('hide');
+    contactBtn.classList.remove('hide');
+
+    // active[1].classList.remove('active');
+    // active[2].classList.remove('active');
+    // active[-1].classList.add('active');
+  }
+});
