@@ -4,6 +4,8 @@
 
 Javascript practice to store, display and remove objects from localStorage and UI.
 
+![screenshot](Screenshot.png)
+
 ### Built With
 
 * [HTML](https://www.w3schools.com/html/)
@@ -12,7 +14,7 @@ Javascript practice to store, display and remove objects from localStorage and U
 
 ### Live Demo Link
 
- Check [this](https://aduda-boaz.github.io/awesomebooks/) live demo link
+Check [this](https://ibrohimrasulov.github.io/awesomebooks/) live demo link
 
 ## Authors
 
@@ -21,11 +23,6 @@ Javascript practice to store, display and remove objects from localStorage and U
 - GitHub: [@IbrohimRasulov](https://github.com/IbrohimRasulov)
 - Twitter: [@IbrohimRasu1ov](https://twitter.com/IbrohimRasu1ov)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
-
-👤 **Boaz Aduda**
-
-- GitHub: [@Aduda-Boaz](https://github.com/Aduda-Boaz)
-- Twitter: [Twitter](https://twitter.com/BoazAduda)
 
 ## Getting Started
 
