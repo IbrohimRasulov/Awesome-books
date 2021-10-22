@@ -37,8 +37,6 @@ function addToLocalStorage() {
   author.value = '';
 }
 
-form.addEventListener('submit', addNewBook);
-
 function showBook() {
   list.innerHTML = '';
   Object.keys(localStorage).forEach((key) => {
@@ -78,6 +76,8 @@ function addNewBook() {
   showBook();
   alert('New book added');
 }
+
+form.addEventListener('submit', addNewBook);
 
 showBook();
 
