@@ -28,21 +28,27 @@ class Books {
   }
 }
 
-const newBooks = new Books();
+let newBooks = new Books();
 
 function addToLocalStorage() {
   const key = title.value;
   localStorage.setItem(key, JSON.stringify(newBooks));
+  title.value = '';
+  author.value = '';
 }
 
 function addNewBook() {
+  newBooks = new Books();
   newBooks.addBook(title.value, author.value);
   addToLocalStorage();
+  showBook();
+  alert('New book added');
 }
 
 form.addEventListener('submit', addNewBook);
 
 function showBook() {
+  list.innerHTML = '';
   Object.keys(localStorage).forEach((key) => {
     const dataFromLocalStorage = JSON.parse(localStorage.getItem(key));
 
@@ -75,27 +81,25 @@ function showBook() {
 
 showBook();
 
-const tabs = document.querySelector('.nav-pills')
+const tabs = document.querySelector('.tabs')
 const listBtn = document.querySelector('.section-1');
 const addBtn = document.querySelector('.section-2');
 const contactBtn = document.querySelector('.section-3');
+// const active = document.querySelectorAll('.nav-link');
 
 tabs.addEventListener('click', function(e){
-  if (e.target.textContent == 'List') {
-    listBtn.classList.remove('hide');
-    addBtn.classList.add('hide');
-    contactBtn.classList.add('hide');
-  } else if (e.target.textContent == 'Add new') {
-    listBtn.classList.add('hide');
-    addBtn.classList.remove('hide');
-    contactBtn.classList.add('hide');
-  } else {
-    listBtn.classList.add('hide');
-    addBtn.classList.add('hide');
-    contactBtn.classList.remove('hide');
-
-    // active[1].classList.remove('active');
-    // active[2].classList.remove('active');
-    // active[-1].classList.add('active');
-  }
-});
+    if (e.target.textContent == 'List') {
+      listBtn.classList.remove('hide');
+      addBtn.classList.add('hide');
+      contactBtn.classList.add('hide');
+    } else if (e.target.textContent == 'Add new') {
+      listBtn.classList.add('hide');
+      addBtn.classList.remove('hide');
+      contactBtn.classList.add('hide');
+    } else {
+      listBtn.classList.add('hide');
+      addBtn.classList.add('hide');
+      contactBtn.classList.remove('hide');
+    }
+    console.log(e.target)
+  });

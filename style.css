@@ -1,7 +1,8 @@
-.section-container {
-  width: 700px;
+#awesome-books {
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 100px;
 }
 
 form {
@@ -13,11 +14,8 @@ form {
   background-color: #ddd;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
+.hide {
+  display: none;
 }
 
 footer {
@@ -25,12 +23,11 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: white;
+  margin-top: 50px;
 }
 
-.hide {
-  display: none;
-}
-
-#list:last-child {
-  margin-bottom: 400px;
+.active-tab {
+  background-color: #0d6efd;
+  border-radius: 8px;
+  color: white;
 }
