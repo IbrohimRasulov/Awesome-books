@@ -31,3 +31,10 @@ footer {
   border-radius: 8px;
   color: white;
 }
+
+#currentDate {
+  float: right;
+  font-size: 20px;
+  font-family: monospace;
+  margin: -10px 15px;
+}
