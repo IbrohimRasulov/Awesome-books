@@ -83,7 +83,7 @@ showBook();
 const tabs = document.querySelector('.tabs');
 const listBtn = document.querySelector('.section-1');
 const addBtn = document.querySelector('.section-2');
-const contactBtn = document.querySelector('.section-3');;
+const contactBtn = document.querySelector('.section-3');
 
 tabs.addEventListener('click', (e) => {
   if (e.target.textContent === 'List') {
