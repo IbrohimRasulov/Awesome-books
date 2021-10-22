@@ -37,14 +37,6 @@ function addToLocalStorage() {
   author.value = '';
 }
 
-function addNewBook() {
-  newBooks = new Books();
-  newBooks.addBook(title.value, author.value);
-  addToLocalStorage();
-  showBook();
-  alert('New book added');
-}
-
 form.addEventListener('submit', addNewBook);
 
 function showBook() {
@@ -79,6 +71,14 @@ function showBook() {
   });
 }
 
+function addNewBook() {
+  newBooks = new Books();
+  newBooks.addBook(title.value, author.value);
+  addToLocalStorage();
+  showBook();
+  alert('New book added');
+}
+
 showBook();
 
 const tabs = document.querySelector('.tabs');
@@ -87,12 +87,12 @@ const addBtn = document.querySelector('.section-2');
 const contactBtn = document.querySelector('.section-3');
 // const active = document.querySelectorAll('.nav-link');
 
-tabs.addEventListener('click', function (e) {
+tabs.addEventListener('click', (e) => {
   if (e.target.textContent === 'List') {
     listBtn.classList.remove('hide');
     addBtn.classList.add('hide');
     contactBtn.classList.add('hide');
-  } else if (e.target.textContent == 'Add new') {
+  } else if (e.target.textContent === 'Add new') {
     listBtn.classList.add('hide');
     addBtn.classList.remove('hide');
     contactBtn.classList.add('hide');
