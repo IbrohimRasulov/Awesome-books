@@ -12,9 +12,9 @@ Javascript practice to store, display and remove objects from localStorage and U
 * [CSS](https://www.w3schools.com/css/)
 * [JS](https://www.javascript.com/)
 
-### Live Demo Link
+### Live Demo
 
-Check [this](https://ibrohimrasulov.github.io/awesomebooks/) live demo link
+[Live Demo Link](https://ibrohimrasulov.github.io/awesomebooks/)
 
 ## Authors
 
