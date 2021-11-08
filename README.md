@@ -2,7 +2,7 @@
 
 ## About The Project
 
-Javascript practice to store, display and remove objects from localStorage and UI.
+I created an app to to store, display and remove books from localStorage and UI. Check the live demo to try
 
 ![screenshot](Screenshot.png)
 
