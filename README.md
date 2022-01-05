@@ -14,7 +14,7 @@
 
 ### Live Demo
 
-[Live Demo Link](https://ibrohimrasulov.github.io/awesomebooks/)
+[Live Demo Link](https://ibrohimrasulov.github.io/Awesome-books/)
 
 ## Authors
 
